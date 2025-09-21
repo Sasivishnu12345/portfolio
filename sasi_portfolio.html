@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sasivishnu S | Portfolio</title>
+  <style>
+    body {
+      margin:0; font-family: 'Segoe UI', sans-serif; 
+      background: #f4f7fa; color: #333; line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(120deg, #0077b6, #00b4d8, #90e0ef);
+      color: white; text-align: center; padding: 70px 20px;
+    }
+    header h1 { margin: 0; font-size: 3rem; letter-spacing: 1px; }
+    header h3 { margin: 15px 0; font-weight: 400; font-size: 1.5rem; }
+    .typing { color: #ffd166; font-weight: bold; }
+    nav { margin-top: 25px; }
+    nav a {
+      margin: 0 15px; padding: 8px 15px;
+      color: white; text-decoration: none; font-weight: bold;
+      border-radius: 5px; transition: 0.3s;
+    }
+    nav a:hover { background: rgba(255,255,255,0.2); }
+    section {
+      max-width: 950px; margin: 70px auto; padding: 0 20px;
+      opacity: 0; transform: translateY(40px); transition: all 1s ease;
+    }
+    section.visible { opacity: 1; transform: translateY(0); }
+    h2 {
+      border-left: 5px solid #00b4d8; padding-left: 12px;
+      margin-bottom: 25px; font-size: 2rem; color:#0077b6;
+    }
+    .skills span {
+      display: inline-block; background: linear-gradient(45deg,#00b4d8,#0077b6);
+      color: white; padding: 8px 14px; margin: 6px 5px; border-radius: 20px;
+      font-size: 0.9rem; box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skills span:hover {
+      transform: scale(1.1); box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+    }
+    .card {
+      background: white; padding: 25px; border-radius: 12px;
+      margin: 20px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-7px) scale(1.02);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+    .projects-grid {
+      display: grid; grid-template-columns: 1fr; gap: 20px;
+    }
+    @media(min-width: 700px) {
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+    }
+    footer {
+      background: #0077b6; color: white; text-align: center;
+      padding: 25px; margin-top: 60px;
+    }
+    .links a {
+      margin: 0 10px; color: #ffd166; text-decoration: none; transition: color 0.3s;
+    }
+    .links a:hover { color: #fff; }
+    .github-project-name {
+      font-weight: bold; font-size: 1.1rem; color:#0077b6;
+      text-decoration:none; display:block; margin-bottom:8px;
+    }
+    .github-project-name:hover { text-decoration: underline; }
+    .github-project-desc { color: #555; margin-bottom: 6px; }
+
+    /* Hire Me button + form */
+    .hire-btn {
+      display:inline-block;
+      background: linear-gradient(45deg,#00b4d8,#0077b6);
+      color:white; padding:12px 25px; margin-top:15px;
+      font-weight:bold; border-radius:30px;
+      text-decoration:none; border:none; cursor:pointer;
+      transition:0.3s;
+    }
+    .hire-btn:hover { transform:scale(1.05); box-shadow:0 5px 15px rgba(0,0,0,0.3); }
+    form input, form textarea {
+      width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:6px;
+      font-family:inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sasivishnu S</h1>
+    <h3><span class="typing"></span></h3>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Ambitious and results-driven IT engineering student. Hands-on experience with full-stack development, real-time project work, problem solving, and passionate about creating meaningful user experiences.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Java</span><span>Python</span><span>C</span>
+      <span>JavaScript</span><span>React</span><span>Django REST</span>
+      <span>MySQL</span><span>Flutter</span><span>HTML</span><span>CSS</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid" id="projects-grid"></div>
+  </section>
+
+  <section id="experience">
+    <h2>Internships & Experience</h2>
+    <div class="card">
+      <h3>Dr. Mahalingam College of Engineering & Technology (2023–2024)</h3>
+      <p>Alumni Database Verification. Organized guest lectures and reunions. Coordinated with stakeholders and ensured smooth operations across events.</p>
+    </div>
+    <div class="card">
+      <h3>Techvolt Software Solutions (2024)</h3>
+      <p>Data Science Intern: handled real world dataset analysis, feature-engineering, model evaluation, and presentation of insights to team leads.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>B.Tech IT (Honors)</h3>  
+      <p>Dr. Mahalingam College of Engineering & Technology, Pollachi | CGPA: 8.64 (2026)</p>
+    </div>
+    <div class="card">
+      <h3>HSC (2022)</h3>
+      <p>Srinivasa Vidhyalaya Matric Hr. Sec School, Udumalpet | 89%</p>
+    </div>
+    <div class="card">
+      <h3>SSLC (2020)</h3>
+      <p>Srinivasa Vidhyalaya Matric Hr. Sec School, Udumalpet | 73.4%</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p><strong>Email:</strong> sasivishnu19@gmail.com</p>
+      <p><strong>Phone:</strong> +91 8248946153</p>
+      <p class="links">
+        <a href="https://github.com/Sasivishnu12345" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/sasivishnu-s-624034294" target="_blank">LinkedIn</a> |
+        <a href="https://leetcode.com/u/Sasivishnu19" target="_blank">LeetCode</a>
+      </p>
+      <!-- Hire Me Form -->
+      <form action="https://formspree.io/f/mrbyzzdj" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="hire-btn">Hire Me</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sasivishnu S | Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script>
+    // Typing effect
+    const typingText = ["Full Stack Developer", "Cloud Engineer", "Problem Solver"];
+    let index = 0, charIndex = 0;
+    const typingElement = document.querySelector(".typing");
+
+    function type() {
+      if (charIndex < typingText[index].length) {
+        typingElement.textContent += typingText[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 1500);
+      }
+    }
+    function erase() {
+      if (charIndex > 0) {
+        typingElement.textContent = typingText[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 50);
+      } else {
+        index = (index + 1) % typingText.length;
+        setTimeout(type, 200);
+      }
+    }
+    type();
+
+    // Scroll reveal
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if(rect.top < triggerBottom) sec.classList.add("visible");
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+    // Fetch GitHub starred projects
+    async function fetchStarredProjects() {
+      const username = 'Sasivishnu12345';
+      const resp = await fetch(`https://api.github.com/users/${username}/starred`);
+      if (!resp.ok) return;
+      const repos = await resp.json();
+      const projectsGrid = document.getElementById('projects-grid');
+      
+      repos.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+      repos.slice(0, 4).forEach(repo => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const name = document.createElement('a');
+        name.href = repo.html_url;
+        name.target = '_blank';
+        name.className = 'github-project-name';
+        name.textContent = repo.name;
+
+        const desc = document.createElement('p');
+        desc.className = 'github-project-desc';
+        desc.textContent = repo.description || 'No description available.';
+
+        card.appendChild(name);
+        card.appendChild(desc);
+        projectsGrid.appendChild(card);
+      });
+    }
+
+    fetchStarredProjects();
+  </script>
+</body>
+</html>
